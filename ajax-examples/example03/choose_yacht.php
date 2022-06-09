@@ -17,7 +17,8 @@ $companies = [
     <title>Выбор яхты</title>
 </head>
 <body>
-    <form method="post" action="yacht-handler.php">
+    <form> <!-- для отправки данных аякс запросом можно не указывать
+                атрибуты method и action -->
         <h2>Заявка на выбор яхты</h2>
         <fieldset>
             <legend>Контактная информация</legend>
