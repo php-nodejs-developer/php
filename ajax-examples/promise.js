@@ -97,19 +97,16 @@ async function someFunc(){
 someFunc().then(data => console.log(data));
 
 fetch('/items')
-    .then(resp => resp.json()) // resolve 1
-    /*new Promise(function (resolve){
-        resolve(resp.json());
-    })*/
+    .then(response => response.json()) // resolve 1
     .then(json => console.log(json));
-;
 
 async function fechfn(){
     try {
-        let resp = await fetch('/items');
-        let json = await resp.json();
+        let response = await fetch('/items');
+        let json = await response.json();
+        console.log(json);
     } catch (e){
-        console.log(e);
+        console.log(e); // вместо метода catch
     }
 }
 
@@ -122,7 +119,6 @@ async function allResult(){
         ]
     )
 }
-
 
 
 

@@ -12,6 +12,7 @@ formData.append(имя, значение); // добавить данные
 formData.append(имя, файл, имя файла); // добавить файл
 formData.delete(имя); // удалить пару по ключу
 formData.get(имя); // получить значение по ключу
+formData.getAll(имя); // получить все значения по ключу
 formData.has(имя); // проверить наличие пары по ключу
 formData.set(name, value); // перезаписать значение по ключу
 formData.set(name, blob, fileName); // перезаписать значение по ключу

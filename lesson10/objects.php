@@ -1,6 +1,7 @@
 <?php
 require_once 'author.php';
 require_once 'article.php';
+require_once 'storage.php';
 
 // создание объекта: new + вызов конструктора
 // объект типа Author / экземпляр типа Author
@@ -29,3 +30,19 @@ var_dump($article02);
 // вывести имя автора статьи $article02
 var_dump($article02->author);
 var_dump($article02->author->name);
+
+$storage = new Storage();
+$storage->addArticle($article02);
+$storage->addArticle($article01);
+
+var_dump($storage);
+
+var_dump($storage->getByTitle('JS'));
+var_dump($storage->getByTitle('PHP 5.6')->text);
+
+var_dump($storage->getByAuthorName('Mike'));
+var_dump($storage->getByAuthorName('Alex'));
+
+
+
+

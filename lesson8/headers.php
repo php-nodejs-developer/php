@@ -1,13 +1,14 @@
 <?php
 // отправить заголовки
-// функцию header() можно вызывать только если клиенту ещё не передавались данные:
-// var_dump, echo, print, html, пустые строки и тд
+// функцию header() можно вызывать только если клиенту ещё не передавались данные
+// в теле сообщения:
+// var_dump, echo, print, printf, html вне php, пустые строки вне php и тд
 header('название заголовка: значение');
 // для передачи однотипных заголовков (заголовки с одинаковым названием не будут перезаписываться)
 header('название заголовка: значение', false);
 
 // например
-/*header('Content-Type: application/pdf');
+/* header('Content-Type: application/pdf');
 header('Content-Disposition: attachment; filename="downloaded.pdf"');
 readfile('original.pdf');*/
 

@@ -8,7 +8,7 @@ for ($index = 0; $index < $ages_len; $index +=1) {
     $element = $ages[$index];
     var_dump($element);
 }
-
+// $files = $_FILES['picture'];
 $files = [
     'name' => ['файл 1', 'файл 2'],
     'size' => [23411, 64565],

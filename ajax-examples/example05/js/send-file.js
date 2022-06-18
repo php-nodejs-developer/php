@@ -15,7 +15,7 @@ document.forms['send-file'].addEventListener('submit',
     });
 */
 
-document.forms['send-file'].addEventListener('submit', function (e){
+/*document.forms['send-file'].addEventListener('submit', function (e){
     e.preventDefault();
 
     // можно сначала проверить файлы на соответствие типу, размеру и тд
@@ -41,5 +41,21 @@ document.forms['send-file'].addEventListener('submit', function (e){
             document.forms['send-file'].before(text);
         });
 
-});
+});*/
 
+
+document.forms['send-file'].addEventListener('submit', function (event){
+    event.preventDefault();
+    let files = this.elements['picture[]'].files;
+    console.log(files);
+    let fd = new FormData();
+    for (let file of files) {
+        console.log(file.size);
+        console.log(file.type);
+        // если с файлом все хорошо
+        fd.append('picture[]', file);
+    }
+    console.log(fd.getAll('picture[]'));
+    // this.submit();
+
+})
