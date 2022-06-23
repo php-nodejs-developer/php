@@ -19,7 +19,8 @@ class AppUser  implements ToFileInterface, UserInterface {
     // магические методы
     public function __clone()
     {
-        /* реализация клонирования */
+        $this->age *= 2;
+        // правила создания копий
     }
 
     public function __toString()

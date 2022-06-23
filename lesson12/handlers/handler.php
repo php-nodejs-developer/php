@@ -26,7 +26,9 @@ abstract class Handler
     abstract public function write();
     abstract public function read();
 
-    static function getHandler(string $file_name_from_user) :Handler
+    // static метод вызывается без создания объектов,
+    // через имя класса
+    static public function getHandler(string $file_name_from_user) :Handler
     {
         $ext = pathinfo($file_name_from_user, PATHINFO_EXTENSION);
 
